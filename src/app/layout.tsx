@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={inter.className + 'min-h-screen'}>
 				{" "}
 				<ThemeProvider
 					attribute="class"
@@ -31,7 +31,7 @@ export default function RootLayout({
 				>
 					{/* <Toaster /> */}
 					<Sidebar />
-					<div>
+					<div className="flex flex-col h-full w-full">
 						<Header />
 						<PageWrapper children={children} />
 					</div>
