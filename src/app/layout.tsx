@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "react-hot-toast";
+import Sidebar from "@/components/sidebar";
+import Header from "@/components/header";
+import PageWrapper from "@/components/pageWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +29,12 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<Toaster />
-					{children}
+					{/* <Toaster /> */}
+					<Sidebar />
+					<div>
+						<Header />
+						<PageWrapper children={children} />
+					</div>
 				</ThemeProvider>
 			</body>
 		</html>
