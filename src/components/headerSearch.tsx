@@ -12,7 +12,7 @@ const HeaderSearch = ({ currentPath }: { currentPath: string }) => {
       />
       <span className="text-white md:-ml-[98px]">
         <div className="flex items-center gap-2 m-1 pl-2 pr-3 text-sm">
-          <Image className="" src={Icon.avatar} alt="search" />
+          <Image className="" src={Icon.toggleClose} alt="search" />
           <h3>Search</h3>
         </div>
       </span>
