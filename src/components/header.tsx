@@ -16,7 +16,6 @@ const OverHead = () => {
   return (
     <div className={`w-full md:pr-8 transition-all duration-300 ease-in-out ${isSidebarVisible ? 'pl-[20rem]' : 'pl-5'}`}>
       <div className="fixed top-0 z-40 w-full pt-3 grid grid-cols-2 md:grid-cols-4 items-center">
-        {/* Container for Toggle Button - Moves Along With Sidebar */}
         <div className={`col-span-1 flex justify-between transition-all duration-300 ease-in-out ${isSidebarVisible ? 'pl-[2rem]' : 'pl-5'} md:pl-5`}>
           <button
             onClick={invokeToggleSidebar}
@@ -33,12 +32,10 @@ const OverHead = () => {
           <HeaderName />
         </div>
 
-        {/* Search Bar - Third Column */}
         <div className="col-span-1 hidde md:flex justify-center items-center">
           <HeaderSearch currentPath={currentPath} />
         </div>
 
-        {/* Header Operations - Fourth Column */}
         <div className="col-span-1 flex justify-end items-center">
           <HeaderOps currentPath={currentPath} />
         </div>
