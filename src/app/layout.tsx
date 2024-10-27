@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Sidebar from "@/components/sidebar";
 import Header from "@/components/header";
 import PageWrapper from "@/components/pageWrapper";
+import SidebarToggleButton from "@/components/sidebarToggleButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					{/* <Toaster /> */}
+					<SidebarToggleButton />
 					<Sidebar />
 					<div className="flex flex-col h-screen w-full">
 						<Header />

@@ -13,11 +13,6 @@ const PageWrapper = ({ children }: { children: ReactNode }) => {
       } md:pl-[20rem]`}
     >
       {children}
-      {isSidebarVisible && (
-        <div
-          className="fixed inset-0 bg-black opacity-50 md:hidden"
-        />
-      )}
     </div>
   );
 };

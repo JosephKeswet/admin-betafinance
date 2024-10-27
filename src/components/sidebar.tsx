@@ -11,11 +11,11 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-white fixed top-0 left-0 z-50 h-screen w-[18rem] transition-all duration-300 ease-in-out border-r border-gray-300 ${isSidebarVisible ? "translate-x-0" : "-translate-x-full"
+      className={`bg-white fixed top-0 left-0 z-40 h-screen w-full md:w-[18rem] transition-all duration-300 ease-in-out border-r border-gray-300 ${isSidebarVisible ? "translate-x-0" : "-translate-x-full"
     } md:translate-x-0 md:block`}
     >
-      <div className="m-6 pb-10 flex justify-between items-center">
-        <div className="flex gap-3">
+      <div className={`m-6 pb-10 flex justify-between items-center ${isSidebarVisible ? 'mt-8' : ''}`}>
+        <div className={`flex gap-3 ${isSidebarVisible ? 'mt-6' : ''}`}>
           <div>
             <Image src={Icon.avatar} alt="User Avatar" />
           </div>
@@ -24,7 +24,7 @@ const Sidebar = () => {
             <Image src={Icon.arrowDown} alt="Avatar Icon" />
           </div>
         </div>
-        <div>
+        <div className={`${isSidebarVisible ? 'mt-6': 'mt-0'}`}>
           <Image src={Icon.notification} alt="Notification" />
         </div>
       </div>

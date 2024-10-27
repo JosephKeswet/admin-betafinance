@@ -1,19 +1,22 @@
+import { useSideBarToggle } from "@/hooks/useSidebarToggle";
 import Image from "next/image";
 import React from "react";
 import Icon from "../lib/constants/icons";
 
 const HeaderOps = ({ currentPath }: { currentPath: string }) => {
+  const { isSidebarVisible } = useSideBarToggle();
+
   const renderHeaderOps = () => {
     switch (currentPath) {
       case "/":
         return (
-          <div className="flex items-center gap-8 md:gap-4 pr-6">
+          <div className={`flex flex-col md:flex-row items-center gap-2 md:gap-4 pr-6`}>
           <div className="flex items-center gap-4">
             <span className="whitespace-nowrap">30 days</span>
             <Image src={Icon.arrowDown} alt="Arrow down" />
           </div>
           <div className="rounded-xl">
-            <span className="bg-[#428AF5] p-3">Download</span>
+            <span className="bg-[#428AF5] p-2 rounded">Download</span>
           </div>
           </div>
         );
