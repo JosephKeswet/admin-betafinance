@@ -3,10 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "react-hot-toast";
-import Sidebar from "@/components/sidebar";
-import Header from "@/components/header";
-import PageWrapper from "@/components/pageWrapper";
-import SidebarToggleButton from "@/components/sidebarToggleButton";
+import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
+import PageWrapper from "@/components/PageWrapper";
+import SidebarToggleButton from "@/components/SidebarToggleButton";
 
 const inter = Inter({ subsets: ["latin"] });
 

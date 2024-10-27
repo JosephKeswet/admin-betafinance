@@ -4,7 +4,7 @@ import { useSideBarToggle } from "@/hooks/useSidebarToggle";
 import Image from "next/image";
 import React from "react";
 import Icon from "../lib/constants/icons";
-import SidebarNav from "./sidebarNav";
+import SidebarNav from "./SidebarNav";
 
 const Sidebar = () => {
   const { isSidebarVisible } = useSideBarToggle();

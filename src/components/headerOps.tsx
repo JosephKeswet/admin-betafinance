@@ -1,14 +1,16 @@
 import { useSideBarToggle } from "@/hooks/useSidebarToggle";
+import { routes } from "@/lib/constants";
 import Image from "next/image";
 import React from "react";
 import Icon from "../lib/constants/icons";
 
 const HeaderOps = ({ currentPath }: { currentPath: string }) => {
-  const { isSidebarVisible } = useSideBarToggle();
 
   const renderHeaderOps = () => {
-    switch (currentPath) {
-      case "/":
+    const matchedItem = routes.sidebarItems.find((item) =>item.path === currentPath);
+    if (matchedItem) {
+      switch (matchedItem) {
+      case routes.sidebarItems[0]:
         return (
           <div className={`flex flex-col md:flex-row items-center gap-2 md:gap-4 pr-6`}>
           <div className="flex items-center gap-4">
@@ -20,7 +22,7 @@ const HeaderOps = ({ currentPath }: { currentPath: string }) => {
           </div>
           </div>
         );
-      case "/products":
+      case routes.sidebarItems[1]:
         return (
           <div className="flex gap-4 items-center">
             <div>
@@ -28,26 +30,28 @@ const HeaderOps = ({ currentPath }: { currentPath: string }) => {
             </div>
         </div>
         );
-      case "/orders":
+      case routes.sidebarItems[2]:
         return <h2 className="whitespace-nowrap">Order Type</h2>;
-      case "/categories":
+      case routes.sidebarItems[3]:
         return <h2 className="whitespace-nowrap">Product Category</h2>;
-      case "/admin":
+      case routes.sidebarItems[4]:
         return (
         <div>
         </div>
         );
-      case "/deliverycompany":
+      case routes.sidebarItems[5]:
         return (
         <div>
         </div>
         );
-      case "/helpcentre":
-        return <h2 className="whitespace-nowrap"></h2>;
+      case routes.sidebarItems[6]:
+        return <h2 className="whitespace-nowrap">Help</h2>;
       default:
         return null;
     }
   };
+  return null;
+};
 
   return <div className={`${currentPath === "/helpcentre" ? "mr-0": "pl-5"}`}>{renderHeaderOps()}</div>;
 };
