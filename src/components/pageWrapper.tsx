@@ -8,7 +8,7 @@ const PageWrapper = ({ children }: { children: ReactNode }) => {
 
   return (
     <div
-      className={`bg-gray-50 flex-grow pr-8 z-30 transition-all duration-300 ease-in-out ${
+      className={`max-h-screen w-full bg-gray-100 flex-grow pr-8 z-30 transition-all duration-300 ease-in-out ${
         isSidebarVisible ? 'pl-[20rem]' : 'pl-5'
       } md:pl-[20rem]`}
     >

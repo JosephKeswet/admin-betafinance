@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className + 'min-h-screen'}>
+			<body className={inter.className + 'max-h-screen'}>
 				{" "}
 				<ThemeProvider
 					attribute="class"
@@ -31,7 +31,7 @@ export default function RootLayout({
 				>
 					{/* <Toaster /> */}
 					<Sidebar />
-					<div className="flex flex-col h-full w-full">
+					<div className="flex flex-col h-screen w-full">
 						<Header />
 						<PageWrapper children={children} />
 					</div>

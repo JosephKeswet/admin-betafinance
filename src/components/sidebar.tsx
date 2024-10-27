@@ -11,7 +11,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-white fixed top-0 left-0 z-50 h-screen w-[20rem] transition-all duration-300 ease-in-out border-r border-gray-300 ${isSidebarVisible ? "translate-x-0" : "-translate-x-full"
+      className={`bg-white fixed top-0 left-0 z-50 h-screen w-[18rem] transition-all duration-300 ease-in-out border-r border-gray-300 ${isSidebarVisible ? "translate-x-0" : "-translate-x-full"
     } md:translate-x-0 md:block`}
     >
       <div className="m-6 pb-10 flex justify-between items-center">
