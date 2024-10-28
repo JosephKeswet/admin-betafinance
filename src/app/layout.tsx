@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "react-hot-toast";
+import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
+import PageWrapper from "@/components/PageWrapper";
+import SidebarToggleButton from "@/components/SidebarToggleButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={inter.className + 'max-h-screen'}>
 				{" "}
 				<ThemeProvider
 					attribute="class"
@@ -26,8 +30,13 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<Toaster />
-					{children}
+					{/* <Toaster /> */}
+					<SidebarToggleButton />
+					<Sidebar />
+					<div className="flex flex-col h-screen w-full">
+						<Header />
+						<PageWrapper children={children} />
+					</div>
 				</ThemeProvider>
 			</body>
 		</html>
