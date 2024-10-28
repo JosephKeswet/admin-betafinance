@@ -1,11 +1,11 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 interface SidebarToggle {
-    isSidebarVisible: boolean;
-    invokeToggleSidebar: () => void;
+  isSidebarVisible: boolean;
+  invokeToggleSidebar: () => void;
 }
 
 export const useSideBarToggle = create<SidebarToggle>((set, get) => ({
-    isSidebarVisible: false,
-    invokeToggleSidebar: () => set({ isSidebarVisible: !get().isSidebarVisible })
+  isSidebarVisible: false,
+  invokeToggleSidebar: () => set({ isSidebarVisible: !get().isSidebarVisible }),
 }));
