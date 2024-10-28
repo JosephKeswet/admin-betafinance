@@ -22,6 +22,9 @@ import SettingsActive from "../../../public/assets/setting-active.svg";
 import Help from "../../../public/assets/help.svg";
 import HelpActive from "../../../public/assets/help-active.svg";
 import NotificationIcon from "../../../public/assets/notification-icon.svg";
+import ArrowUp from "../../../public/assets/arrow-up.svg";
+import ArrowDown from "../../../public/assets/arrow-down.svg";
+import Minus from "../../../public/assets/minus.svg";
 
 export default {
   // avatar,
@@ -48,4 +51,7 @@ export default {
   Help,
   HelpActive,
   NotificationIcon,
+  ArrowUp,
+  ArrowDown,
+  Minus,
 } as const;

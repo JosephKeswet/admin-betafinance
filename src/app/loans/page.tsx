@@ -1,7 +1,11 @@
 import React from "react";
 
 const Loans = () => {
-  return <div>page</div>;
+  return (
+  <div>
+
+  </div>
+  );
 };
 
 export default Loans;
