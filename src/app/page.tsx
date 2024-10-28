@@ -18,10 +18,10 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-1">
       <div className="">
-        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5">
+        <div className="grid grid-cols-2 md:grid-cols-4  xl:grid-cols-4 2xl:grid-cols-5">
           {overview_items.overview_head.map((item, index) => (
           <Card key={index} className='col-span-1 rounded-xs'>
-            <CardHeader>
+            <CardHeader className=''>
               <CardDescription>{item.title}</CardDescription>
             </CardHeader>
             <CardContent>
@@ -37,13 +37,13 @@ export default function Home() {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-6'>
         {table.map((table, tableIndex) => (
           <div key={tableIndex} className="bg-white border-[1px] rounded">
-            <h2 className="text-lg font-semibold border-b-[1px] border-gray-300 p-2">
+            <h2 className="text-lg font-semibold border-b-[1px] border-gray-300 p-2 pl-4">
               {table.table_name}
             </h2>
             <Table className="">
-              <TableBody>
+              <TableBody className=''>
                 {table.rows.map((item, rowIndex) => (
-                  <TableRow className='pl-4' key={rowIndex}>
+                  <TableRow className='mx-4' key={rowIndex}>
                     <TableCell>
                       <div className="flex items-center gap-4">
                         <div>
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
         ))}
         </div>
-        <div>
+        <div className='bg-white'>
           <Chart />
         </div>
         </div>
