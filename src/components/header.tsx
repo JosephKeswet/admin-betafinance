@@ -4,8 +4,6 @@ import { useSideBarToggle } from '@/hooks/useSidebarToggle';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import HeaderOps from './HeaderOps';
-import Icon from "../lib/constants/icons";
-import Image from 'next/image';
 import HeaderSearch from './HeaderSearch';
 import { routes } from '@/lib/constants';
 
