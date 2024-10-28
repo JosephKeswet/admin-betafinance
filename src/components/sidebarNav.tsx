@@ -1,4 +1,4 @@
-import { routes } from "@/lib/constants";
+import { routes } from "../lib/constants/routing";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Loans = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <div>page</div>;
+};
 
-export default Loans
+export default Loans;
