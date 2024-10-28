@@ -67,7 +67,7 @@ const HeaderOps = ({ currentPath }: { currentPath: string }) => {
                       <SelectItem value="blueberry">Blueberry</SelectItem>
                       <SelectItem value="grapes">Grapes</SelectItem>
                       <SelectItem value="pineapple">Pineapple</SelectItem>
-                    </SelectGroup>
+                    </SelectGroup> 
                   </SelectContent>
                 </Select>
                 <div className="rounded-xl">
