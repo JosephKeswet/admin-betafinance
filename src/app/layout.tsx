@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + 'max-h-screen'}>
         {" "}
         <ThemeProvider
           attribute="class"
@@ -32,12 +32,12 @@ export default function RootLayout({
         >
           {/* <Toaster /> */}
           <div className="flex items-start h-screen">
-            <div className="hidden lg:block ">
+            <div className="hidden lg:block">
               <Sidebar />
             </div>
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full md:pl-[250px]">
               <Header />
-              <div className="bg-gray-50 w-full flex-1 overflow-auto h-screen p-6">
+              <div className="bg-gray-50 flex-1 z-30 overflow-auto p-2 md:p-6">
                 {children}
               </div>
             </div>
