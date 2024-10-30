@@ -20,6 +20,7 @@ export interface overviewTableProps {
   table_name: string;
   rows: overviewTableRowProps[];
 }
+
 export interface overviewTableRowProps {
   holder: tableHolderProps,
   email: string,
@@ -32,4 +33,29 @@ export interface tableHolderProps {
   initial: string,
   name: string,
   username: string,
+}
+
+export interface loanItemsProps {
+  loan_head: loanHead[];
+  loan_table: loanTableProps[];
+}
+
+export interface loanHead {
+  title: string;
+  content: string;
+  footer: string;
+}
+
+export interface loanTableProps {
+  rows: loanTableRowProps[];
+}
+
+export interface loanTableRowProps {
+  id: string,
+  amount: string,
+  type: string,
+  interest: string,
+  lender: string,
+  borrower: string,
+  loanPeriod: string,
 }
