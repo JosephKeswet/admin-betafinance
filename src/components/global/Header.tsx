@@ -14,7 +14,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className={`bg-white w-full  p-6 border-b `}>
+    <div className={`bg-white w-full p-6 border-b sticky top-0 z-40`}>
       <div className="flex items-center justify-between">
         <div>
           {routes.sidebarItems.map((item, index) => (
