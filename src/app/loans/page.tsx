@@ -92,7 +92,6 @@ const Loan = () => {
       </div>
 
       <Card className="overflow-x-auto p-0">
-        {/* Table container with min-w-full for responsive width */}
         <Table className="bg-white text-black px-6 min-w-[640px] md:min-w-full">
           <TableHeader className="bg-gray-50">
             <TableRow>
@@ -153,7 +152,6 @@ const Loan = () => {
           </TableBody>
         </Table>
 
-        {/* Responsive pagination controls */}
         <div className="flex flex-col sm:flex-row items-center justify-between p-4 border-t-[1px] border-gray-300">
           <span className="text-sm text-gray-400">Page {currentPage} of 6</span>
           <div className="flex items-center gap-2 mt-2 sm:mt-0">
