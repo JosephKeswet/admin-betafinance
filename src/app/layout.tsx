@@ -26,14 +26,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Main layout container */}
           <div className="flex h-screen">
-            {/* Sidebar for larger screens */}
             <div className="hidden lg:block fixed top-0 left-0 h-full w-[250px]">
               <Sidebar />
             </div>
-
-            {/* Main content area with scrollable content */}
             <div className="flex flex-col flex-1 lg:ml-[250px] overflow-hidden">
               <Header />
               <main className="flex-1 overflow-y-auto bg-gray-50 p-4 md:p-6">
