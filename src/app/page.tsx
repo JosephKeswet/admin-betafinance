@@ -16,7 +16,7 @@ export default function Home() {
   const table = overview_items.overview_table;
 
   return (
-    <main className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 p-4">
+    <main className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 p-4">
       {overview_items.overview_head.map((item, index) => (
         <Card key={index} className="col-span-1 rounded-xs">
           <CardHeader>
@@ -32,13 +32,13 @@ export default function Home() {
       ))}
       
       {table.map((table, tableIndex) => (
-        <Card key={tableIndex} className="col-span-1 md:col-span-2 bg-white p-0 flex flex-col h-[320px]">
+        <Card key={tableIndex} className="col-span-1 md:col-span-2 bg-white p-0 flex flex-col">
           <CardHeader>
           <CardTitle className="text-lg font-semibold border-b-[1px] border-gray-300 p-2 pl-4">
             {table.table_name}
           </CardTitle>
           </CardHeader>
-          <CardContent className="flex overflow-auto">
+          <CardContent className="flex">
           <Table className='min-w-[440px] md:min-w-full'>
             <TableBody>
               {table.rows.map((item, rowIndex) => (

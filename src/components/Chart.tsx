@@ -58,12 +58,12 @@ const chartConfig = {
 
 export function Chart() {
   return (
-    <div className='h-[300px] w-full border-[1px] rounded'>
+    <div className='h-[300px] xl:h-[350px] w-full border-[1px] rounded'>
       <CardHeader className="border-b-[1px] border-gray-300">
         <CardDescription className='font-bold text-lg p-2 pl-4 text-black'>Loan collection summary</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className='h-[250px] w-full'>
+        <ChartContainer config={chartConfig} className='h-[250px] xl:h-[300px] w-full'>
           <AreaChart
             data={chartData}
             margin={{
