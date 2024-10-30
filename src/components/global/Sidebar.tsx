@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-white border-r w-[250px] h-screen flex flex-col justify-between `}
+      className={`bg-white border-r w-[250px] h-screen fixed left-0 flex flex-col justify-between z-50`}
     >
       <section className="flex flex-col gap-4">
         <div

@@ -16,71 +16,68 @@ export default function Home() {
   const table = overview_items.overview_table;
 
   return (
-    <main className="flex flex-col flex-1">
-      <div className="">
-        <div className="grid grid-cols-2 md:grid-cols-4  xl:grid-cols-4 2xl:grid-cols-5">
-          {overview_items.overview_head.map((item, index) => (
-            <Card key={index} className="col-span-1 rounded-xs">
-              <CardHeader className="">
-                <CardDescription>{item.title}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>{item.content}</p>
-              </CardContent>
-              <CardFooter>
-                <p>{item.footer}</p>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-        <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            {table.map((table, tableIndex) => (
-              <div key={tableIndex} className="bg-white border-[1px] rounded">
-                <h2 className="text-lg font-semibold border-b-[1px] border-gray-300 p-2 pl-4">
-                  {table.table_name}
-                </h2>
-                <Table className="">
-                  <TableBody className="">
-                    {table.rows.map((item, rowIndex) => (
-                      <TableRow className="mx-4" key={rowIndex}>
-                        <TableCell>
-                          <div className="flex items-center gap-4">
-                            <div>
-                              <p>{item.holder.id}</p>
-                            </div>
-                            <Image src={item.holder.icon} alt="Icon" />
-                            <span className="rounded-full h-8 w-8 flex items-center justify-center">
-                              <Avatar>
-                                <AvatarFallback className='bg-primary-light'>
-                                  {item.holder.initial}
-                                </AvatarFallback>
-                              </Avatar>
-                            </span>
-                            <div>
-                              <p className="font-bold">{item.holder.name}</p>
-                              <p className="text-sm text-gray-500">
-                                {item.holder.username}
-                              </p>
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell>{item.email}</TableCell>
-                        <TableCell>
-                          {item.noOfLoan}
-                          <span> Loans</span>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
-            ))}
-          </div>
-          <div className="bg-white">
-            <Chart />
-          </div>
-        </div>
+    <main className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 p-4">
+      {overview_items.overview_head.map((item, index) => (
+        <Card key={index} className="col-span-1 rounded-xs">
+          <CardHeader>
+            <CardDescription>{item.title}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>{item.content}</p>
+          </CardContent>
+          <CardFooter>
+            <p>{item.footer}</p>
+          </CardFooter>
+        </Card>
+      ))}
+      
+      {table.map((table, tableIndex) => (
+        <Card key={tableIndex} className="col-span-1 md:col-span-2 bg-white p-0 flex flex-col h-[320px]">
+          <CardHeader>
+          <CardTitle className="text-lg font-semibold border-b-[1px] border-gray-300 p-2 pl-4">
+            {table.table_name}
+          </CardTitle>
+          </CardHeader>
+          <CardContent className="flex overflow-auto">
+          <Table className='min-w-[440px] md:min-w-full'>
+            <TableBody>
+              {table.rows.map((item, rowIndex) => (
+                <TableRow className="left-4" key={rowIndex}>
+                  <TableCell className="text-center">
+                    <div className="flex items-center gap-4">
+                      <div>
+                        <p>{item.holder.id}</p>
+                      </div>
+                      <Image src={item.holder.icon} alt="Icon" />
+                      <span className="rounded-full h-8 w-8 flex items-center justify-center">
+                        <Avatar>
+                          <AvatarFallback className='bg-primary-light'>
+                            {item.holder.initial}
+                          </AvatarFallback>
+                        </Avatar>
+                      </span>
+                      <div>
+                        <p className="font-bold">{item.holder.name}</p>
+                        <p className="text-sm text-gray-500">
+                          {item.holder.username}
+                        </p>
+                      </div>
+                    </div>
+                  </TableCell>
+                  <TableCell>{item.email}</TableCell>
+                  <TableCell className="text-right">
+                    {item.noOfLoan}
+                    <span> Loans</span>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          </CardContent>
+        </Card>
+      ))}
+      <div className="col-span-1 md:col-span-2 xl:col-span-4 bg-white">
+        <Chart />
       </div>
     </main>
   );
