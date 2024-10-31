@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "react-hot-toast";
-import PageWrapper from "@/components/PageWrapper";
-import SidebarToggleButton from "@/components/SidebarToggleButton";
 import Sidebar from "@/components/global/Sidebar";
 import Header from "@/components/global/Header";
 
@@ -21,28 +18,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className + 'max-h-screen'}>
-        {" "}
+    <html lang="en" className="overflow-hidden">
+      <body className={`${inter.className} h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Toaster /> */}
-          <div className="flex items-start h-screen">
-            <div className="hidden lg:block">
+          <div className="flex h-screen">
+            <div className="hidden lg:block fixed top-0 left-0 h-full w-[250px]">
               <Sidebar />
             </div>
-            <div className="flex flex-col w-full md:pl-[250px]">
+            <div className="flex flex-col flex-1 lg:ml-[250px] overflow-hidden">
               <Header />
-              <div className="bg-gray-50 flex-1 z-30 overflow-auto p-2 md:p-6">
+              <main className="flex-1 overflow-y-auto bg-gray-50 p-4 md:p-6">
                 {children}
-              </div>
+              </main>
             </div>
           </div>
-          {/* <PageWrapper children={children} /> */}
         </ThemeProvider>
       </body>
     </html>
